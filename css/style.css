@@ -1,9 +1,10 @@
 :root {
-    --primary-color: rgba(15, 51, 96, 0.514);
-    --secondary-color: rgba(0, 119, 0, 0.9);
+    --primary-color: rgba(123, 125, 128, 0.514);
+    --secondary-color: #252a34;
     --overlay-color: rgba(22,33,62,0.9);
     --menu-speed: 0.75s;
     --max-width: 960px;
+
 }
 
 /* :root {
@@ -51,37 +52,64 @@ a {
 }
 /* End Utilites */
 
+
+
 /* Start Showcase */
 #showcase {
     position: relative;
     height: 100vh;
-    background: var(--primary-color)
+    top: 30px;
+    /* background: var(--primary-color) */
 }
 #showcase .showcase-content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content:space-between;
     align-items: center;
     text-align: center;
-    width: 100%;
-    height: 100%;
+    
+    /* width: 100%;
+    height: 100%; */
     color: white;
+    background-color: #d6d1ce;
 }
+/* #showcase .showcase-content:before {
+    content: "";
+     background: url(/img/profile.jpg) no-repeat center center/cover; 
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 70%;
+    height: 50%;
+    z-index: -1;
+} */
 #showcase .showcase-content p {
     font-size: 30px;
     font-weight: bold;
 }
-#showcase .showcase-content:before {
-    content: "";
-    background: url(/img/15.jpg) no-repeat center center/cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
 #showcase .showcase-content h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+    color: rgb(111, 111, 112);
+    /* color: var(--overlay-color); */
+}
+#showcase .showcase-content a {
+    position: absolute;
+    top: 297px;
+    right: 50px;
+}
+#showcase .showcase-content span {
+    color: var(--secondary-color);
+}
+#showcase img {
+    width: 50%;
+}
+.showcase-content + div::after {
+    content: "";
+    height: 2px;
+    width: 50%;
+    position: absolute;
+    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+    border: solid 2px var(--secondary-color);
 }
 /* End Showcase */
