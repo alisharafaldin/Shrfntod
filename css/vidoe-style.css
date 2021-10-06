@@ -70,13 +70,37 @@ a{text-decoration: none;}
 }
 
 /* Start vidoe */
-div.container {
+.container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     border: 1px solid rebeccapurple;
-    background-color:red;
-    max-width: 80%;
-    margin: auto;
+    max-width: 75%;
+    margin-top: 100px;
+    
+    
+}
+.container .video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid;
+    width: 500px;
+    height: 350px;
     margin-bottom: 50px;
+    background-color: #fff;
+
+}
+.container .video h2 {
+    color: var(--dark-Color);
+}
+.container .video .myiframe {
+    width: 95%;
+    height: 300px;
+    margin-right: 2.5%;
+    /* padding-bottom: 2.5%; */
 }
 
 /* End vidoe */
