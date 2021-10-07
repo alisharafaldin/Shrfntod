@@ -201,20 +201,10 @@
 
 .postes-contaner .post-content h6{
     margin: 10px 0;
-    margin-left: 45%;
+    /* margin-left: 45%; */
     color: var(--Writer-Color);   
 } 
-.postes-contaner .post-content .post-text{
-    width: 90%;
-    right: 15%;
-    padding: 10px;
-    max-height: 500px;
-    overflow: auto;
-    font-size: .9375rem;
-    text-align: right;    
-    box-shadow: 0 0 1px;
-    border-radius: 3px;
-}
+
 .postes-contaner .post-content .post-text a {
     color: var(--bottom-Color);
     transition: all 0.5s;

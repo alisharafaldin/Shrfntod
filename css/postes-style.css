@@ -75,7 +75,7 @@ a{
     margin: 20px 0;
 }
 .text-primary {
-    color: var(--primary-color);
+    color: var(--dark-Color);
 }
 .text-center {
     text-align: center;
@@ -177,8 +177,8 @@ a{
     height: 75%;
     margin: 0;
     padding: 0;
-    background-color: #eee;
-    border: 1px solid #777;
+    background-color: #fff;
+    border-bottom: 1px solid #777;
     overflow: auto;
 }
 
@@ -215,7 +215,7 @@ a{
     width: 90%;
     margin-top: 100px;
     /* margin-right: 20px; */
-    border: 1px solid rebeccapurple;
+    /* border: 1px solid rebeccapurple; */
     background-color: var(--main-Color)
 }
 
@@ -242,7 +242,8 @@ a{
 }
 .postes-contaner .post-content h6{
     margin: 10px 0;
-    margin-left: 25% !important;
+    
+    margin-left: 0;
     color: var(--Writer-Color);  
 } 
 .postes-contaner .post-content .post-text{
@@ -253,8 +254,9 @@ a{
     overflow: auto;
     font-size: .9375rem;
     text-align: right;    
-    box-shadow: 0 0 1px;
-    border-radius: 3px;
+    /* box-shadow: 0 0 1px; */
+    /* border-radius: 3px; */
+    /* border-top: 1px solid var(--Writer-Color); */
 }
 .postes-contaner .post-content .post-text a {
     color: var(--bottom-Color);
@@ -268,6 +270,13 @@ a{
     top: -10px;
 }
 
+.postes-contaner .post-content .post-info p {
+    font-weight: bold;
+}
+.postes-contaner .post-content .post-info a span{
+    color: var(--highlight-Color) !important;
+    font-weight: bold;
+}
 .postes-contaner .post-content::after {
     content: "";
     height: 5px;
