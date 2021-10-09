@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Almarai', sans-serif;
+            font-weight: var(--font-weight-normal);
+        }
+        :root {
+            --default-padding: 15px;
+            --color-whie: #fff;
+            --color-bg: #e9e9e9;
+            --font-size-normal: 16px;
+            --font-size-medium: 20px;
+            --font-size-large: 30px;
+            --font-size-xlarge: 45px;
+            --font-weight-light: 300;
+            --font-weight-normal: 400;
+            --font-weight-bold: 700;
+        }
+        .container {
+            direction: rtl;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--color-bg)
+        }
+        .container:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            opacity: 0.5;
+            background: url(img/ramadan.jpg);
+        }
+        .container:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            opacity: 0.5;
+            background: radial-gradient(closest-side, rgba(5, 119, 103, .85), rgba(3, 73, 73, .95));
+        }
+        .container-content {
+            position: absolute;
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            justify-content: center;
+            padding: var(--default-padding);
+            color: var(--color-white);
+            z-index: 1;
+        }
+        .container-moon {
+            width: 50%;
+        }
+        .container-text {
+            font-size: var(--font-size-large);
+            font-weight: var(--font-weight-bold);
+            margin: calc(var(--default-padding)*3) 0 var(--default-padding);
+        }
+        .container-text-specialword {
+            color: #ebc882;
+            text-shadow: 2px 2px 5px #ebc882;
+        }
+        .container-remaining {
+            font-size: var(--font-size-medium);
+            font-weight: var(--font-weight-bold);
+        }
+        .container-remaining-time {
+            font-size: var(--font-size-xlarge);
+            font-weight: var(--font-weight-light);
+        }
+        .container-text-from {
+            display: none;
+        }
+        .container-duringramadan .container-text-to {
+            display: none;
+        }
+        .container-duringramadan .container-text-from {
+            display: inline-block;
+        }
+        .container-moon {
+            z-index: 1;
+        }
+        .container-shapes {
+            display: flex;
+        }
+
+        .container-star {
+            animation: fade 1s infinite alternate ease-in-out;
+        }
+        .container-shapeimg {
+                    animation: spin 1s infinite alternate ease-in-out;
+                    transform-origin: top;
+        }
+        /* أنيميشن النجوم */
+        @keyframes fade {
+            from {opacity: .4;}
+            to {opacity: 1;}
+        }
+        /* أنيميشن الفوانيس */
+        @keyframes spin {
+            from {transform: rotate(-3deg);}
+            to {transform: rotate(3deg);}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container-content">
+            <!-- <img class="container-moon" 
+                 src="img/ramadan.jpg"
+                 alt="moon">
+            <div class="container-shapes">
+                <div class="container-shape"></div>
+                <div class="container-shape"></div>
+                <div class="container-shape"></div>
+                <div class="container-shape"></div>
+            </div> -->
+            <p class="container-text">
+                <span>باقي</span>
+                <span class="container-text-to">على</span>
+                <span class="container-text-from">من</span>
+                <span class="container-text-specialword">رمضان</span>
+            </p>
+            <p class="container-remaining">
+                <span class="container-remaining-time">--</span>
+                <span>يوم</span>
+            </p>  
+        </div>
+    </div>
+    <script src="js/moment.js"></script>
+    <script src="js/moment-with-locales.js"></script>
+    <script>
+       (function () {
+            const remainingTimeElement = document.querySelector('.container-remaining-time');
+            console.log(remainingTimeElement);
+            const todayGeorgianDate = moment(); //تاريخ اليوم ميلادي
+            console.log(todayGeorgianDate);
+            const todayHijriFormat = todayGeorgianDate.format('YYYY/M/D')
+            console.log(todayHijriFormat);
+            const todayHijriDate = moment(todayHijriFormat, 'YYYY/M/D')
+            console.log(todayHijriDate);
+            const thisHijriYear = parseInt(todayHijriDate.format('YYYY'))
+            console.log(thisHijriYear);
+            let ramadanDate = moment(`${thisHijriYear}/9/1`, 'YYYY/M/D');
+            console.log(ramadanDate);
+            let daysInRamadan = ramadanDate.daysInMonth();
+            console.log(daysInRamadan);
+            let diff = todayHijriDate.diff(ramadanDate, 'days');
+            console.log(diff);
+
+            if (diff >= 0) {
+                if (diff <= daysInRamadan) { // during Ramadan خلال رمضان
+                    document.querySelector('.container')
+                            .classList
+                            .add('container-duringramadan');
+                    diff = daysInRamadan - diff;
+                }
+                else { // after Ramadan بعد رمضان
+                    const nextHijriYear = thisHijriYear + 1;
+                    ramadanDate = moment(`${nextHijriYear}/9/1`, 'YYYY/M/D');
+                    diff = todayHijriDate.diff(ramadanDate, 'days');
+                }
+        }
+        remainingTimeElement.textContent = Math.abs(diff).toLocaleString('ar-sa');
+        
+    })(); 
+
+       
+    </script>
+     
+     
+</body>
+</html>
