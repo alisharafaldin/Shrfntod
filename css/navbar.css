@@ -43,7 +43,7 @@ body {
     border-radius: 5px;
     transition: background 0.4s ease-in-out;  
 }
-#navbar .menu-wrap .menu > div > div > ul > li:first-child > a,
+/* #navbar .menu-wrap .menu > div > div > ul > li:first-child > a, */
 #navbar .menu-wrap .menu > div > div > ul > li > a:hover {
     background-color: var(--primary-color);
 }
