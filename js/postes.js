@@ -1,3 +1,4 @@
+
 // Smooth scrolling
 $(".art-par a").on("click", function(event) {
 
@@ -9,4 +10,5 @@ $(".art-par a").on("click", function(event) {
       $("html, body").animate({scrollTop: $(hash).offset().top - 100}, 800);
     }
   });
+  
   
