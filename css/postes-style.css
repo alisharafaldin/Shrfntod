@@ -1,23 +1,8 @@
 :root {
-    /* --primary-color: rgba(15,52,96,0.9);
-    /* --secondary-color: rgba(233,69,96,0.9); */
-    --overlay-color: rgba(22,33,62,0.9);
     --menu-speed: 0.75s;
     --max-width: 960px;
-    
-    --primary-color: rgba(123, 125, 128, 0.514);
-    --secondary-color: #252a34;
-    --overlay-color: rgba(22,33,62,0.9);
     --menu-speed: 0.75s;
     --max-width: 960px;
-    
-    --main-Color: #EAEAEA;
-    --dark-Color: #252A34;
-    --bottom-Color: #08D9D6;
-    --highlight-Color: #FF2E63;
-    --black-Color: #000;
-    --whitgh-Color: #fff;
-    --Writer-Color: #a8a7a7;
 } */
 
 * {
@@ -162,6 +147,7 @@ a{
 .par {
     display: flex;
     border: 1px solid red;
+    font-family: 'Cairo', sans-serif;
     
 }
 .ul-par{
@@ -213,7 +199,8 @@ a{
     margin-top: 100px;
     /* margin-right: 20px; */
     /* border: 1px solid rebeccapurple; */
-    background-color: var(--main-Color)
+    background-color: var(--main-Color);
+    font-family: 'Cairo', sans-serif;
 }
 
 .postes-contaner .post-content {

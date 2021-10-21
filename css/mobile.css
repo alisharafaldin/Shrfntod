@@ -184,7 +184,8 @@
     flex-direction: column;
     justify-content: center;
     margin-top: 50px;
-    margin-right: 10%;
+    margin-right: 25%;
+    width: 75%;
     /* border: 1px solid rebeccapurple; */
     background-color: var(--main-Color)
 }
@@ -195,10 +196,11 @@
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    width: 75%;
-    /* right: %; */
+    width: 90%;
     margin-top: 30px;
     background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .postes-contaner .post-content img{
@@ -212,6 +214,12 @@
     color: var(--Writer-Color);   
 } 
 
+.postes-contaner .post-content .post-title {
+    padding: 0 5px;
+}
+.postes-contaner .post-content .post-text {
+    font-size: 20px;
+}
 .postes-contaner .post-content .post-text a {
     color: var(--bottom-Color);
     transition: all 0.5s;
@@ -235,10 +243,15 @@
 
 
 /* Start Video */
-
 .container .video {
     width: 100%;
-    height: 200px;
+    height: 100%;
 }
-
 /* End Video */
+
+
+/* Start Support */
+.support .support-item .numper span {
+    word-break: break-all;
+}
+/* end Support */

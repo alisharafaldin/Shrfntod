@@ -1,9 +1,7 @@
 :root {
-    --primary-color: rgba(123, 125, 128, 0.514);
-    --secondary-color: #252a34;
-    --overlay-color: rgba(22,33,62,0.9);
+  
     --menu-speed: 0.75s;
-    --max-width: 960px;
+    /* --max-width: 960px; */
 
 }
 
