@@ -39,8 +39,8 @@ body {
     list-style: none;
 }
 #navbar .menu-wrap .menu > div > div > ul > li > a {
-    padding: 1rem;
-    margin: 0.5rem;
+    padding: 15px;
+    margin: 0;
     border-radius: 5px;
     transition: background 0.4s ease-in-out;  
     position: relative;
@@ -52,7 +52,7 @@ body {
     content: '';
     position: absolute;
     border: var(--primary-color) solid 1px;
-    left: -8px;
+    left: -1px;
     height: 50%;
 
 }

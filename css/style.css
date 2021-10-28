@@ -50,6 +50,9 @@ li {
 .btn:hover{
     background-color: var(--secondary-color);
 }
+.bg-dark {
+    background-color: var(--dark-Color);
+}
 /* End Utilites */
 
 
@@ -92,7 +95,7 @@ li {
     color: rgb(111, 111, 112);
     /* color: var(--overlay-color); */
 }
-#showcase .showcase-content a {
+#showcase .showcase-content a{
     position: absolute;
     top: 297px;
     right: 50px;

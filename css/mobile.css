@@ -141,7 +141,6 @@
 /* ======  Start Par  ======     */
 .par {
     top: 65px;
-    display: flex;
     position: fixed;
     width: 100%;
     height: 56px;
@@ -170,6 +169,7 @@
     top: 0;
     text-align: center;
     margin: 5px 0;
+    flex-grow: 1;
 }
 
 .li-par:last-child{
